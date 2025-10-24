@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 int main (){
+   printf ("Super Trunfo!\n");
+   
     int carta = 1;
     int estado = 'a';
     int pontosT = 30;
