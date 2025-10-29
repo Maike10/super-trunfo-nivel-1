@@ -4,15 +4,24 @@ int main (){
    printf ("Super Trunfo!\n");
 
    printf ("\n");
-   
+
+
+   //Carta 1
+
+   //variaveis:
     int carta = 1;
     int estado = 'a';
-    int pontosT = 30;
+    int pontosTuristicos = 30;
     char codigo [10] = "a01";
-    char cidade [20] = "Goiania";
-    double população = 1400000;
-    float area = 7500.52;
-    float pib = 257.30;
+    char cidade [20] = "niquelandia";
+    double população = 34964;
+    float area = 9843;
+    float pib = 1290000000;
+
+    //Calculo de densidade populacional e pib per capita
+    float densidadePopulacional , pibpercapita;
+    densidadePopulacional = (população / area);
+    pibpercapita = (pib / população);
 
     printf ("carta: %d\n" , carta);
     printf ("estado: %c\n" , estado);
@@ -21,28 +30,40 @@ int main (){
     printf ("população: %.0f\n" , população);
     printf ("área: %.2f\n" , area);
     printf ("pib: %.2f\n" , pib);
-    printf ("numeros de pontos turisticos: %d\n" , pontosT);
+    printf ("numeros de pontos turisticos: %d\n" , pontosTuristicos);
+    printf ("densidade populacional: %.2f\n" , densidadePopulacional);
+    printf ("pib per capita: %.2f\n" , pibpercapita);
 
 
-    int carta_2 = 2;
-    int estado_2 = 'b';
-    int pontosT_2 = 36;
-    char codigo_2 [10] = "a02";
-    char cidade_2 [20] = "Salvador";
-    double população_2 = 25000000;
-    float area_2 = 8316.30;
-    float pib_2 = 290.10;
+    //Carta 2
+
+    //variaveis:
+    int carta2 = 2;
+    int estado2 = 'b';
+    int pontosTuristicos2 = 36;
+    char codigo2 [10] = "a02";
+    char cidade2 [20] = "uruaçu";
+    double população2 = 42546;
+    float area2 = 2142;
+    float pib2 = 1300000000;
+
+    //Calculo de densidade populacional e pib per capita
+    float densidadePopulacional2 , pibpercapita2;
+    densidadePopulacional2 = (população2 / area2);
+    pibpercapita2 = (pib2 / população2);
 
     printf ("\n");
 
-    printf ("carta: %d\n" , carta_2);
-    printf ("estado: %c\n" , estado_2);
-    printf ("codigo: %s\n" , codigo_2);
-    printf ("cidade: %s\n", cidade_2);
-    printf ("população: %.0f\n" , população_2);
-    printf ("área: %.2f\n" , area_2);
-    printf ("pib: %.2f\n" , pib_2);
-    printf ("numeros de pontos turisticos: %d\n" , pontosT_2);
+    printf ("carta: %d\n" , carta2);
+    printf ("estado: %c\n" , estado2);
+    printf ("codigo: %s\n" , codigo2);
+    printf ("cidade: %s\n", cidade2);
+    printf ("população: %.0f\n" , população2);
+    printf ("área: %.2f\n" , area2);
+    printf ("pib: %.2f\n" , pib2);
+    printf ("numeros de pontos turisticos: %d\n" , pontosTuristicos2);
+    printf ("densidade populacional: %.2f\n" , densidadePopulacional2);
+    printf ("pib per capita: %.2f\n" , pibpercapita2);
 
     printf ("\n");
 
