@@ -16,10 +16,13 @@ int main (){
     char cidade [20] = "niquelandia";
     double população = 34964;
     float area = 9843;
-    float pib = 1290000000;
+    unsigned long int pib = 1290000000;
+    float densidadePopulacional;
+    float pibpercapita;
+    float superPoder = (pib + pontosTuristicos + população + area) + (pib / população) - (população / area);
+
 
     //Calculo de densidade populacional e pib per capita
-    float densidadePopulacional , pibpercapita;
     densidadePopulacional = (população / area);
     pibpercapita = (pib / população);
 
@@ -29,10 +32,11 @@ int main (){
     printf ("cidade: %s\n" , cidade);
     printf ("população: %.0f\n" , população);
     printf ("área: %.2f\n" , area);
-    printf ("pib: %.2f\n" , pib);
+    printf ("pib: %.2lu\n" , pib);
     printf ("numeros de pontos turisticos: %d\n" , pontosTuristicos);
     printf ("densidade populacional: %.2f\n" , densidadePopulacional);
     printf ("pib per capita: %.2f\n" , pibpercapita);
+    printf ("super poder: %.0f\n", superPoder);
 
 
     //Carta 2
@@ -45,10 +49,13 @@ int main (){
     char cidade2 [20] = "uruaçu";
     double população2 = 42546;
     float area2 = 2142;
-    float pib2 = 1300000000;
+    unsigned long int pib2 = 1300000000;
+    float densidadePopulacional2;
+    float pibpercapita2;
+    float superPoder2 = (pib2 + pontosTuristicos2 + população2 + area2) + (pib2 / população2) - (população2 / area2);
+
 
     //Calculo de densidade populacional e pib per capita
-    float densidadePopulacional2 , pibpercapita2;
     densidadePopulacional2 = (população2 / area2);
     pibpercapita2 = (pib2 / população2);
 
@@ -60,10 +67,22 @@ int main (){
     printf ("cidade: %s\n", cidade2);
     printf ("população: %.0f\n" , população2);
     printf ("área: %.2f\n" , area2);
-    printf ("pib: %.2f\n" , pib2);
+    printf ("pib: %.2lu\n" , pib2);
     printf ("numeros de pontos turisticos: %d\n" , pontosTuristicos2);
     printf ("densidade populacional: %.2f\n" , densidadePopulacional2);
     printf ("pib per capita: %.2f\n" , pibpercapita2);
+    printf ("super poder: %.0f\n", superPoder2);
+
+    printf ("\n");
+
+    //comparando as cartas
+    printf ("comparando as cartas:\n");
+    printf ("pontos turisticos: a carta 2 venceu! %d\n", pontosTuristicos > pontosTuristicos2);
+    printf ("população: a carta 2 venceu! %d\n", população > população2);
+    printf ("área: a carta 1 venceu! %d\n", area > area2);
+    printf ("pib: a carta 2 venceu! %d\n", pib > pib2);
+    printf ("densidade populacional: a carta 1 venceu! %d\n", densidadePopulacional < densidadePopulacional2);
+    printf ("pib per capita: a carta 1 venceu! %d\n", pibpercapita > pibpercapita2);
 
     printf ("\n");
 
