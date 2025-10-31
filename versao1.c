@@ -2,7 +2,6 @@
 
 int main (){
    printf ("Super Trunfo!\n");
-
    printf ("\n");
 
 
@@ -21,11 +20,11 @@ int main (){
     float pibpercapita;
     float superPoder = (pib + pontosTuristicos + população + area) + (pib / população) - (população / area);
 
-
     //Calculo de densidade populacional e pib per capita
     densidadePopulacional = (população / area);
     pibpercapita = (pib / população);
-
+    
+    //sequencia de printfs
     printf ("carta: %d\n" , carta);
     printf ("estado: %c\n" , estado);
     printf ("codigo: %s\n" , codigo);
@@ -39,6 +38,11 @@ int main (){
     printf ("super poder: %.0f\n", superPoder);
 
 
+
+    printf("\n");
+
+
+    
     //Carta 2
 
     //variaveis:
@@ -54,13 +58,11 @@ int main (){
     float pibpercapita2;
     float superPoder2 = (pib2 + pontosTuristicos2 + população2 + area2) + (pib2 / população2) - (população2 / area2);
 
-
     //Calculo de densidade populacional e pib per capita
     densidadePopulacional2 = (população2 / area2);
     pibpercapita2 = (pib2 / população2);
-
-    printf ("\n");
-
+    
+    //sequencia de printfs
     printf ("carta: %d\n" , carta2);
     printf ("estado: %c\n" , estado2);
     printf ("codigo: %s\n" , codigo2);
@@ -75,16 +77,72 @@ int main (){
 
     printf ("\n");
 
-    //comparando as cartas
-    printf ("comparando as cartas:\n");
+    //comparando os atributos das cartas
+    /*printf ("comparando as cartas:\n");
     printf ("pontos turisticos: a carta 2 venceu! %d\n", pontosTuristicos > pontosTuristicos2);
     printf ("população: a carta 2 venceu! %d\n", população > população2);
     printf ("área: a carta 1 venceu! %d\n", area > area2);
     printf ("pib: a carta 2 venceu! %d\n", pib > pib2);
     printf ("densidade populacional: a carta 1 venceu! %d\n", densidadePopulacional < densidadePopulacional2);
     printf ("pib per capita: a carta 1 venceu! %d\n", pibpercapita > pibpercapita2);
+    */
+    printf ("\n");
+
+    //comparando os atributos das cartas (usando if e else)
+    printf ("Comparando os atributos\n");
+
+    if (população > população2){
+        printf("A população de Niquelândia é maior que a população Uruaçu\n");
+    }
+    else {
+        printf("A população de Uruaçu é maior que população Niquelândia\n");
+    }
+
+    if (area > area2){
+        printf("A área de Niquelândia é maior que a área Uruaçu\n");
+    }
+    else {
+        printf ("A área de Uruaçu é maior que a área de Niquelândia\n");
+    }
+
+    if (pib > pib2){
+        printf ("O pib de Niquelândia é maior que o pib de Uruaçu\n");
+    }
+    else {
+        printf ("O pib de Uruaçu é maior que o pib de Niquelândia\n");
+    }
+
+    if (pontosTuristicos > pontosTuristicos2){
+        printf ("Niquelândia tem mais pontos turisticos do que Uruaçu\n");
+    }
+    else {
+        printf ("Uruaçu tem mais pontos turisticos do que Niquelândia\n");
+    }
+
+    if (densidadePopulacional < densidadePopulacional2){
+        printf ("A densidade populacional de Niquelândia é menor do que a densidade populacional de Uruaçu\n");
+    }
+    else {
+        printf ("A densidade populacional de Uruaçu é menor do que a densidade populacional de Niquelândia\n");
+    }
+
+    if (pibpercapita > pibpercapita2){
+        printf ("O pib per capita de Niquelândia é maior que o pib per capita de Uruaçu\n");
+    }
+    else{
+        printf ("O pib per capita de Uruaçu é maior que o pib per capita de Niquelândia\n");
+    }
+
+    if (superPoder > superPoder2){
+        printf ("O super poder de Niquelândia é maior que o super poder de Uruaçu\n");
+    }
+    else {
+        printf ("O super poder de Uruaçu é maior que o super poder de Niquelândia\n");
+    }
 
     printf ("\n");
+
+
 
 
     return 0;
