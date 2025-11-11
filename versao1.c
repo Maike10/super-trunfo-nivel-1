@@ -79,159 +79,172 @@ int main (){
 
     printf ("\n");
 
-    //comparando os atributos das cartas
-    /*printf ("comparando as cartas:\n");
-    printf ("pontos turisticos: a carta 2 venceu! %d\n", pontosTuristicos > pontosTuristicos2);
-    printf ("população: a carta 2 venceu! %d\n", população > população2);
-    printf ("área: a carta 1 venceu! %d\n", area > area2);
-    printf ("pib: a carta 2 venceu! %d\n", pib > pib2);
-    printf ("densidade populacional: a carta 1 venceu! %d\n", densidadePopulacional < densidadePopulacional2);
-    printf ("pib per capita: a carta 1 venceu! %d\n", pibpercapita > pibpercapita2);
-    */
+    //Menu interativo, declarando variáveis.
+    float valor1, valor2, valor3, valor4;
+    int atributo1, atributo2, atributo3, atributo4;
+    float soma1, soma2;
+
+    //Inicio do jogo!
+    printf ("Bem vindo ao jogo, Super Trunfo!\n");
     printf ("\n");
-
-    //comparando os atributos das cartas (usando if e else)
-    printf ("Comparando os atributos\n");
-
-    if (população1 > população2){
-        printf("A população de Niquelândia é maior que a população Uruaçu\n");
-    }
-    else {
-        printf("A população de Uruaçu é maior que população Niquelândia\n");
-    }
-
-    if (area1 > area2){
-        printf("A área de Niquelândia é maior que a área Uruaçu\n");
-    }
-    else {
-        printf ("A área de Uruaçu é maior que a área de Niquelândia\n");
-    }
-
-    if (pib1 > pib2){
-        printf ("O pib de Niquelândia é maior que o pib de Uruaçu\n");
-    }
-    else {
-        printf ("O pib de Uruaçu é maior que o pib de Niquelândia\n");
-    }
-
-    if (pontosTuristicos1 > pontosTuristicos2){
-        printf ("Niquelândia tem mais pontos turisticos do que Uruaçu\n");
-    }
-    else {
-        printf ("Uruaçu tem mais pontos turisticos do que Niquelândia\n");
-    }
-
-    if (densidadePopulacional1 < densidadePopulacional2){
-        printf ("A densidade populacional de Niquelândia é menor do que a densidade populacional de Uruaçu\n");
-    }
-    else {
-        printf ("A densidade populacional de Uruaçu é menor do que a densidade populacional de Niquelândia\n");
-    }
-
-    if (pibpercapita1 > pibpercapita2){
-        printf ("O pib per capita de Niquelândia é maior que o pib per capita de Uruaçu\n");
-    }
-    else{
-        printf ("O pib per capita de Uruaçu é maior que o pib per capita de Niquelândia\n");
-    }
-
-    if (superPoder1 > superPoder2){
-        printf ("O super poder de Niquelândia é maior que o super poder de Uruaçu\n");
-    }
-    else {
-        printf ("O super poder de Uruaçu é maior que o super poder de Niquelândia\n");
-    }
-
-    printf ("\n");
-
-    //Menu interativo para comparar atributos
-    int escolha;
-
-    printf ("### Menu interativo! ###\n");
-    printf ("### Comparando atributos Uruaçu X Niquelândia ###\n");
-    printf ("1. População\n");
-    printf ("2. Área\n");
-    printf ("3. Pib\n");
-    printf ("4. Números de pontos turisticos\n");
-    printf ("5. Densidade populacional\n");
-
+    printf ("Escolha os atributos da carta 1\n");
+    printf ("1. Pontos turisticos\n");
+    printf ("2. População\n");
+    printf ("3. Área\n");
+    printf ("Primeiro atributo: ");
+    scanf ("%d", &atributo1);
+    printf ("Segundo atributo: ");
+    scanf ("%d", &atributo2);
     printf("\n");
 
-    printf ("Escolha qual atributo voçê quer comparar: ");
-    scanf ("%d", &escolha);
-
+    printf ("Agora escolha os atributos da carta 2\n");
+    printf ("1. Pontos turisticos\n");
+    printf ("2. População\n");
+    printf ("3. Área\n");
+    printf ("Primeiro atributo: ");
+    scanf ("%d", &atributo3);
+    printf ("Segundo atributo: ");
+    scanf ("%d", &atributo4);
     printf ("\n");
+    
 
-    switch (escolha)
+    if (atributo1 == atributo2){
+        printf ("Voçê escolheu o mesmo atributo para a carta 1. Escolha atributos diferentes!\n");
+        printf ("\n");
+    } else {
+    switch (atributo1)
     {
     case 1:
-        if (população1 == população2){
-            printf ("empate!\n");
-        } else if (população1 > população2){
-            printf ("Niquelândia (carta 1 ) venceu!\n");
-        } else{
-            printf ("Uruaçu (carta 2) venceu!\n");
-        }
-        printf ("Atributo comparado: Populaçâo\n");
-        printf ("população de Uruaçu (carta 2) 42546 / População de Niquelândia (Carta 1) 34964\n");
+        printf ("Voçê escolheu as opções: 'Pontos turísticos' e ");
+        (valor1 = pontosTuristicos1);
         break;
 
     case 2:
-        if (area1 == area2){
-            printf ("Empate!\n");
-        } else if (area1 > area2){
-            printf ("Niquelândia (carta 1 ) venceu!\n");
-        } else{
-            printf ("Uruaçu (carta 2) venceu!\n");
-        }
-        printf ("Atributo comparado: Área\n");
-        printf ("Área de Uruaçu (carta 2) 2142.00 / Área de Niquelândia (Carta 1) 36895.09\n");
+        printf ("Voçê escolheu as opções: 'População' e ");
+        (valor1 = população1);
         break;
 
     case 3:
-        if (pib1 == pib2){
-            printf ("Empate!\n");
-        } else if (pib1 > pib2){
-            printf ("Niquelândia (carta 1 ) venceu!\n");
-        } else{
-            printf ("Uruaçu (carta 2) venceu!\n");
-        }
-        printf ("Atributo comparado: Pib\n");
-        printf ("Pib de Uruaçu (carta 2) 1300000000 / Pib de Niquelândia (Carta 1) 36895.09\n");
-        break;
-
-    case 4:
-        if (pontosTuristicos1 == pontosTuristicos2){
-            printf ("Empate!\n");
-        } else if (pontosTuristicos1 > pontosTuristicos2){
-            printf ("Niquelândia (carta 1 ) venceu!\n");
-        } else {
-            printf ("Uruaçu (carta 2) venceu!\n");
-        }
-        printf ("Atributo comparado: Números de pontos turisticos\n");
-        printf ("Números de pontos turisticos de Uruaçu (carta 2) 36 / Números de pontos turisticos de Niquelândia (Carta 1) 30\n");
-        break;
-
-    case 5:
-        if ((densidadePopulacional1 = (população1 / area1)) == (densidadePopulacional2 = (população2 / area2))){
-            printf ("Empate!\n");
-        } else if ((densidadePopulacional1 = (população1 / area1)) < (densidadePopulacional2 = (população2 / area2))){
-            printf ("Niquelândia (carta 1 ) venceu!\n");
-        } else{
-            printf ("Uruaçu (carta 2) venceu!\n");
-        }
-        printf ("Atributo comparado: Densidade populacional\n");
-        printf ("Densidade populacional de Uruaçu (carta 2) 19.86 / Densidade populacional de Niquelândia (Carta 1) 3.55\n");
+        printf ("Voçê escolheu as opções: 'Área' e ");
+       (valor1 = area1);
         break;
     
     default:
-    printf ("Opção invalida. Tente novamente!\n");
+    printf ("Entrada com valores inválidos para atributos da carta 1. Tente novamente!\n");
         break;
     }
+    }
 
-    printf ("\n");
+if (atributo1 == atributo2){
 
+    } else {
+        switch (atributo2)
+    {
+    case 1:
+        printf ("'Pontos turísticos' para a carta 1\n");
+        (valor2 = pontosTuristicos1);
+        break;
+
+    case 2:
+        printf ("'População' para a carta 1\n");
+        (valor2 = população1);
+        break;
+
+    case 3:
+        printf ("'Área' para a carta 1\n");
+        (valor2 = area1);
+        break;
     
+    default:
+    printf ("Entrada com valores inválidos para atributos da carta 1. Tente novamente!\n");
+        break;
+    }
+    }
+
+
+    if (atributo1 == atributo2){
+
+    } else {
+    soma1 = valor1 + valor2;
+    printf ("A soma dos dois atributos selecionados da carta 1 é: %.2f\n", soma1);
+    printf ("\n");
+    }
+
+
+
+    if (atributo3 == atributo4){
+        printf ("Voçê escolheu o mesmo atributo para a carta 2. Escolha atributos diferentes!\n");
+        printf ("\n");
+    } else {
+    switch (atributo3)
+    {
+    case 1:
+        printf ("Voçê escolheu as opções: 'Pontos turísticos' e ");
+        (valor3 = pontosTuristicos1);
+        break;
+
+    case 2:
+        printf ("Voçê escolheu as opções: 'População' e ");
+        (valor3 = população1);
+        break;
+
+    case 3:
+        printf ("Voçê escolheu as opções: 'Área' e ");
+       (valor3 = area1);
+        break;
+    
+    default:
+    printf ("Entrada com valores inválidos para atributos da carta 1. Tente novamente!\n");
+        break;
+    }
+    }
+
+if (atributo3 == atributo4){
+
+    } else {
+        switch (atributo4)
+    {
+    case 1:
+        printf ("'Pontos turísticos' para a carta 2\n");
+        (valor4 = pontosTuristicos1);
+        break;
+
+    case 2:
+        printf ("'População' para a carta 2\n");
+        (valor4 = população1);
+        break;
+
+    case 3:
+        printf ("'Área' para a carta 2\n");
+        (valor4 = area1);
+        break;
+    
+    default:
+    printf ("Entrada com valores inválidos para atributos da carta 2. Tente novamente!\n");
+        break;
+    }
+    }
+    
+    
+    if (atributo3 == atributo4){
+
+    } else {
+    soma2 = valor3 + valor4;
+    printf ("A soma dos dois atributos selecionados da carta 2 é: %.2f\n", soma2);
+    printf ("\n");
+    }
+
+
+    soma1 > soma2 ? 1 : 0;
+
+   if (soma1 > soma2){
+        printf ("Resultado final: A carta 1 venceu!\n");
+    } else if (soma1 < soma2){
+        printf ("Resultado final: A carta 2 venceu!\n");
+    } else {
+        printf ("Resultado final: Empate!\n");
+    }
+
 
 
     return 0;
